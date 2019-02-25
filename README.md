@@ -1,5 +1,5 @@
 # A simple WebGL Engine
-A lightweight game engine made with pure WebGL, together with a simple demo making use of it.
+A lightweight game engine made with pure WebGL, plus a simple demo making use of it.
 
 The original idea behind this was to experiment with the capabilities that pure WebGL can offer. Hence, no third-party graphical libraries (such as [three.js](https://threejs.org/)) were used.
 
