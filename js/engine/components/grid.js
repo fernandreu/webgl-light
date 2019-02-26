@@ -14,8 +14,6 @@ export class Grid extends Mesh {
         this._hDiv = hDiv;
         this._vDiv = vDiv;
 
-        // TODO: Change the position and normal buffers to dynamic draw once the height map is implemented
-
         // Create the grid of points
         this.positionBuffer = this.gl.createBuffer();
         this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.positionBuffer);
@@ -32,7 +30,6 @@ export class Grid extends Mesh {
         this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array(this._positions), this.gl.STATIC_DRAW);
 
         // Set up the normals
-        // TODO: Adjust normals based on z coordinate of neighbours
         this.normalBuffer = this.gl.createBuffer();
         this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.normalBuffer);
         this._normals = [];
