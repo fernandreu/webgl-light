@@ -66,8 +66,11 @@ function run() {
     const camera = new Camera();
     const cameraEntity = new Entity();
     cameraEntity.position = vec3.fromValues(0, 0, 5);
+    quat.fromEuler(cameraEntity.rotation, -15, 0, 0);
+    const controller = new CameraController();
     cameraEntity.attachComponent(camera);
-    cameraEntity.attachComponent(new CameraController());
+    cameraEntity.attachComponent(controller);
+    controller.reset();
     scene.camera = camera;
 
     // Add one rotating cube on each corner, with random rotation speed, scale and color
