@@ -1,5 +1,5 @@
 import {Mesh} from "./mesh.js";
-import {vec3} from "../../vendor/gl-matrix";
+import {vec3} from "../../vendor/gl-matrix/index.js";
 
 export class Grid extends Mesh {
     constructor(gl, shader, width, height, hDiv=10, vDiv=10) {

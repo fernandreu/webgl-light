@@ -1,4 +1,4 @@
-import {quat, vec3} from "../vendor/gl-matrix";
+import {quat, vec3} from "../vendor/gl-matrix/index.js";
 import {Mesh} from "./components/mesh.js";
 
 /**

@@ -1,6 +1,6 @@
 import {Component} from "./component.js";
 import {inputManager} from "../input-manager.js";
-import {quat, vec3} from "../../vendor/gl-matrix";
+import {quat, vec3} from "../../vendor/gl-matrix/index.js";
 
 /**
  * Component which maps the usual keys to navigate a camera in a scene (such as in Unity) while allowing you

@@ -1,5 +1,5 @@
 import {Component} from "./component.js";
-import {quat} from "../../vendor/gl-matrix";
+import {quat} from "../../vendor/gl-matrix/index.js";
 
 /**
  * Component which simply rotates an Entity at a constant speed

@@ -1,4 +1,4 @@
-import {mat4} from "../../vendor/gl-matrix";
+import {mat4} from "../../vendor/gl-matrix/index.js";
 import {Component} from "./component.js";
 
 /**

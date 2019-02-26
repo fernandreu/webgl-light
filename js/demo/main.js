@@ -3,7 +3,7 @@ import {Scene} from "../engine/scene.js";
 import {TextureShader} from "../engine/shaders/texture-shader.js";
 import {Camera} from "../engine/components/camera.js";
 import {ColorShader} from "../engine/shaders/color-shader.js";
-import {quat, vec3, vec4} from "../vendor/gl-matrix";
+import {quat, vec3, vec4} from "../vendor/gl-matrix/index.js";
 import {Entity} from "../engine/entity.js";
 import {RotatingComponent} from "../engine/components/rotating-component.js";
 import {inputManager} from "../engine/input-manager.js";

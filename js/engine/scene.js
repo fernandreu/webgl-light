@@ -1,4 +1,4 @@
-import {vec4} from "../vendor/gl-matrix";
+import {vec4} from "../vendor/gl-matrix/index.js";
 
 export class Scene {
     /**
