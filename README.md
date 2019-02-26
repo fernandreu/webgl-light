@@ -14,11 +14,11 @@ For a live demo of the project, check the following link:
 
 https://fernandreu.github.io/webgl-light/
 
-After clicking the scene, the camera can be moved by using standard Unity-like scene navigation keys:
+After clicking the scene, the camera can be moved by using standard Unity-like scene navigation controls:
 
  - **Mouse movement:** rotate the camera around
- - **A/D:** move the camera left / right
- - **W/S:** move the camera forward / backwards
- - **E/Q:** move the camrea up / down
+ - **A/D keys:** move the camera left / right
+ - **W/S keys:** move the camera forward / backwards
+ - **E/Q keys:** move the camrea up / down
 
 **There is no navigation support for mobile devices (without keyboard / mouse) yet.**
