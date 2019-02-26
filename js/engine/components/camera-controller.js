@@ -12,16 +12,13 @@ export class CameraController extends Component{
         this.speed = 2.0;
         this.mousePrecision = 0.05;
         let caller = this;
-        this.reset();
+        this._xRotation = 0.0;
+        this._yRotation = 0.0;
         inputManager.mouseMoveListeners.push((x, y) => caller._onMouseMove(x, y));
     }
 
     reset() {
-        if (this.entity === null) {
-            this._xRotation = 0.0;
-            this._yRotation = 0.0;
-            return;
-        }
+        if (this.entity === null) return;
 
         // TODO: Move the quaternion to Euler transformation to a utility function
         //  The best place would be the gl-matrix library, but that should be treated as a black box in case the
