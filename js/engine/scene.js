@@ -8,7 +8,7 @@ export class Scene {
     constructor(gl) {
         this._gl = gl;
         this._camera = null;
-        this.clearColor = vec4.fromValues(0, 0, 0, 1.0);
+        this.clearColor = vec4.fromValues(0.75, 0.75, 0.75, 1.0);
         this.clearDepth = 1.0;
 
         /**
@@ -40,7 +40,20 @@ export class Scene {
      * @param {Entity} entity The entity to be added
      */
     addEntity(entity) {
+        if (entity in this._entities) return;
         this._entities.push(entity);
+    }
+
+    /**
+     * Removes an entity to the scene
+     * @param {Entity} entity The entity to be added
+     */
+    removeEntity(entity) {
+        for (let i = 0; i < this._entities.length; ++i) {
+            if (this._entities[i] !== entity) continue;
+            this._entities.splice(i, 1);
+            return;
+        }
     }
 
     /**

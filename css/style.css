@@ -3,9 +3,43 @@ body {
 }
 
 canvas {
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.expression {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 50%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px;
+    background: #444444;
+}
+
+.expression label {
+    float: left;
+    width: auto;
+    color: white;
+    margin: 0 4px 0 4px;
+    font-style: italic;
+}
+
+.expression input {
+    text-align: center;
+    width: auto;
+    flex-grow: 100;
+}
+
+.expression button {
+    width: auto;
 }

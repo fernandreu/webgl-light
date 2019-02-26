@@ -2,8 +2,14 @@ import {Mesh} from "./mesh.js";
 import {vec3} from "../../vendor/gl-matrix/index.js";
 
 export class Grid extends Mesh {
-    constructor(gl, shader, width, height, hDiv=10, vDiv=10) {
+    constructor(gl, shader, width, height, hDiv=10, vDiv=10, func=null) {
         super(gl, shader);
+
+        if (func === null || (typeof func !== 'string' && !(func instanceof String))) {
+            func = () => 0.0;
+        } else {
+            func = new Function('x', 'y', '"use strict"; return ' + func);
+        }
 
         this._hDiv = hDiv;
         this._vDiv = vDiv;
@@ -17,7 +23,7 @@ export class Grid extends Mesh {
         for (let j = 0; j <= vDiv; ++j) {
             let row = [];
             for (let i = 0; i <= hDiv; ++i) {
-                let z = 1 - 5 * (i / hDiv - 0.5)**2 + 0.6 * Math.cos(4 * Math.PI * (j / vDiv - 0.5));
+                let z = func(2 * i / hDiv - 1, 2 * j / vDiv - 1);
                 row.push([width * (i / hDiv - 0.5), height * (j / vDiv - 0.5), z]);
             }
             positions.push(row);
