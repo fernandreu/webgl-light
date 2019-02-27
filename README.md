@@ -14,6 +14,8 @@ For a live demo of the project, check the following link:
 
 https://fernandreu.github.io/webgl-light/
 
+Given the use of ES6, the demo will only work in modern browsers. A version compatible with older browsers can be generated with a transpiler such as [Babel](https://babeljs.io/).
+
 After clicking the scene, the camera can be moved by using standard Unity-like scene navigation controls:
 
  - **Mouse movement:** rotate the camera around
