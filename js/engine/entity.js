@@ -37,7 +37,7 @@ export class Entity {
      * @param {Component} component
      */
     attachComponent(component) {
-        if (component in this._components) return;
+        if (this._components.indexOf(component) != -1) return;
 
         // If the component was attached to another entity, detach it first
         if (component.entity !== null) {

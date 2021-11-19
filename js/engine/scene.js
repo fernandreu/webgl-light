@@ -30,7 +30,7 @@ export class Scene {
             return;
         }
         this._camera = value;
-        if (!(value.entity in this._entities)) {
+        if (this._entities.indexOf(value.entity) == -1) {
             this._entities.push(value.entity);
         }
     }
@@ -40,7 +40,7 @@ export class Scene {
      * @param {Entity} entity The entity to be added
      */
     addEntity(entity) {
-        if (entity in this._entities) return;
+        if (this._entities.indexOf(entity) != -1) return;
         this._entities.push(entity);
     }
 
